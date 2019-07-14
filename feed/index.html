@@ -12,7 +12,7 @@
 	<atom:link href="https://moonharvest.github.io/feed/" rel="self" type="application/rss+xml" />
 	<link>http://moonharvest.github.io/</link>
 	<description>A game about farming oxygen on the moon</description>
-	<lastBuildDate>Sun, 07 Jul 2019 10:47:40 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 14 Jul 2019 14:13:56 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,75 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=5.2.2</generator>
 	<item>
+		<title>Combat Arrives in Lunar Pioneer</title>
+		<link>https://moonharvest.github.io/combat-arrives-in-lunar-pioneer/</link>
+				<pubDate>Sun, 14 Jul 2019 13:58:37 +0000</pubDate>
+		<dc:creator><![CDATA[tommus]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://moonharvest.github.io/?p=77</guid>
+				<description><![CDATA[Week 3 has been a very active week of development, new game mechanics, and improved artwork. Just see the size of the changelog in this post! In fact, so much has been completed, I&#8217;m not sure I&#8217;ve actually noted it...]]></description>
+								<content:encoded><![CDATA[
+<p>Week 3 has been a very active week of development, new game mechanics, and improved artwork. Just see the size of the changelog in this post! In fact, so much has been completed, I&#8217;m not sure I&#8217;ve actually noted it all.</p>
+
+
+
+<figure class="wp-block-image"><img src="https://moonharvest.github.io/wp-content/uploads/2019/07/Screenshot-2019-07-14-at-15.10.44.png" alt="" class="wp-image-88" srcset="https://moonharvest.github.io/wp-content/uploads/2019/07/Screenshot-2019-07-14-at-15.10.44.png 644w, https://moonharvest.github.io/wp-content/uploads/2019/07/Screenshot-2019-07-14-at-15.10.44-300x270.png 300w" sizes="(max-width: 644px) 100vw, 644px" /><figcaption>The first title screen mockup for Lunar Pioneer.</figcaption></figure>
+
+
+
+<p>The most important change made to Lunar Pioneer this week is the addition of a combat ready area. Right now I&#8217;m referring to this area as the &#8220;Mines&#8221;. The combat is a mix of Asteroids and Binding of Isaac &#8212; the player moves around similar to Asteroids, but there&#8217;s static walls, and spawning enemies with a (rather simple) AI.</p>
+
+
+
+<p>Right now there&#8217;s two types of enemies and only 1 level. A tiny &#8220;slime&#8221; and a small slime that spawns tiny slimes when it&#8217;s killed. Future enemy plans include a boss, an enemy type that can shoot at the player, an enemy type that rushes the player when in close proximity, and lastly an enemy type that would release a shock blast when close enough to the player.</p>
+
+
+
+<p><strong>Farm Changes</strong></p>
+
+
+
+<p>This week there was very few changes made to the farm area of the game, I have made a few graphical improvements, but the main focus this week was on Inventory &amp; HUD changes, variable systems improvement and adding the combat system to the game.</p>
+
+
+
+<p>I did plan a few changes for the farm this week though, the planned changes include a randomised &#8220;dusty&#8221; state for crops each morning, this would require that the crops are cleaned by the vacuum, otherwise they will not grow, or will not generate oxygen.</p>
+
+
+
+<p>I also have plans for a dust storm event that will be the games first weather type, during a dust storm day the player cannot remove dust from the crops, and cannot remain outside without losing health.</p>
+
+
+
+<p>Lastly, I have plans for an overnight asteroid strike event which will create a new crater on the farm, destroying any crops or objects that it meets.</p>
+
+
+
+<p><strong>A New Interior</strong></p>
+
+
+
+<p>It is now possible for the player to move locations. This was always going to be required so that the user can visit NPC&#8217;s, as well as having their own space, but it&#8217;s a real pleasure to have the system in place, working and designed.</p>
+
+
+
+<figure class="wp-block-image"><img src="https://moonharvest.github.io/wp-content/uploads/2019/07/Screenshot-2019-07-13-at-14.02.54-1024x924.png" alt="" class="wp-image-90" srcset="https://moonharvest.github.io/wp-content/uploads/2019/07/Screenshot-2019-07-13-at-14.02.54-1024x924.png 1024w, https://moonharvest.github.io/wp-content/uploads/2019/07/Screenshot-2019-07-13-at-14.02.54-300x271.png 300w, https://moonharvest.github.io/wp-content/uploads/2019/07/Screenshot-2019-07-13-at-14.02.54-768x693.png 768w, https://moonharvest.github.io/wp-content/uploads/2019/07/Screenshot-2019-07-13-at-14.02.54.png 1274w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>The current &#8220;Hab&#8221; interior complete with oxygen providing plants.</figcaption></figure>
+
+
+
+<p>There&#8217;s a lot of changes to come to the interior, including functionality for the storage chest, crafting conveyor, and the addition of a computer for the player to receive mail from the other inhabitants.</p>
+
+
+
+<p><strong>Development Week 3: July 7th to July 14th 2019</strong></p>
+
+
+
+<ul><li>Updated globalvar to global.variable for future compatibility</li><li>Redesigned inventory screen</li><li>Add player oxygen value &amp; icon to inventory screen</li><li>Add player money value &amp; icon to inventory screen</li><li>Add oxygen storage value &amp; icon to inventory screen</li><li>Add oxygen backpack value &amp; icon to inventory screen</li><li>Redesigned HUD</li><li>Added currently active item to HUD</li><li>Added button press event to switch through currently active items</li><li>Improved day end event sequence</li><li>Seeds need to change amounts when used from inventory</li><li>Add system for harvesting oxygen from fully grown plants daily</li><li>Harvested oxygen goes into the player backpack</li><li>Added deposit to storage system</li><li>Add a meter to the player backpack displaying currently held o2</li><li>Updated inventory system from an array &amp; key array system, to a matrix &#8212; much more flexible</li><li>Added basic inventory item re-ordering</li><li>Redesigned player character ready for tool animations</li><li>Design house interior</li><li>Added room change player positioning functionality</li><li>Diagonal collisions cause the player to get stuck is now fixed!</li><li>Added &#8211; Basic combat area and basic combat system</li><li>Added &#8211; health display to HUD</li><li>Spawn soil on each shovel interaction</li><li>Make crop hole decay after x days, instead of the next day</li></ul>
+]]></content:encoded>
+										</item>
+		<item>
 		<title>Name Change &#8211; Lunar Pioneer</title>
 		<link>https://moonharvest.github.io/lunar-pioneer/</link>
 				<pubDate>Sun, 07 Jul 2019 10:20:05 +0000</pubDate>

@@ -12,7 +12,7 @@
 	<atom:link href="https://lunarpioneer.github.io/category/uncategorized/feed/" rel="self" type="application/rss+xml" />
 	<link>http://lunarpioneer.github.io/</link>
 	<description>A game about farming oxygen on the moon</description>
-	<lastBuildDate>Sun, 14 Jul 2019 14:13:56 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 22 Jul 2019 10:24:51 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,83 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=5.2.2</generator>
 	<item>
+		<title>Economy System, Auto-Generation &#038; Animation</title>
+		<link>https://lunarpioneer.github.io/economy-system-auto-generation-animation/</link>
+				<pubDate>Mon, 22 Jul 2019 09:53:53 +0000</pubDate>
+		<dc:creator><![CDATA[tommus]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://lunarpioneer.github.io/?p=96</guid>
+				<description><![CDATA[Week 4 was the busiest week I&#8217;ll likely have with Lunar Pioneer for a while, as my real life job is going to be busy for a few weeks now. I completed loads of tasks this week however, every week...]]></description>
+								<content:encoded><![CDATA[
+<p>Week 4 was the busiest week I&#8217;ll likely have with Lunar Pioneer for a while, as my real life job is going to be busy for a few weeks now. I completed <strong>loads</strong> of tasks this week however, every week I&#8217;m inching Lunar Pioneer toward being a playable and enjoyable game, but right now, it&#8217;s still a state of disconnected systems.</p>
+
+
+
+<p>I have started a dedicated <a href="https://twitter.com/lunar_pioneer">Twitter account for Lunar Pioneer</a> also, check it out, follow etc. if you&#8217;re interested in the game and my journey making it <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<p><strong>Adding a full economy to the game</strong></p>
+
+
+
+<p>My idea for Lunar Pioneer has always been a dual economy, Gold &amp; Oxygen. The player will have to make a decision of how best to handle their crops, animals etc. Based upon their current needs for either  consumable. As of week 4, the game now has a strong (albeit in need of balance) Gold economy. The player can visit the shop in town, buy seeds, sell crops and grow their farm. It&#8217;s also possible for the player to harvest oxygen from fully grown crops, and add this to mass storage, though nothing happens from there.</p>
+
+
+
+<p>I had a number of challenges implementing the shop screen, the chief being that I don&#8217;t want the player to be able to sell key items. The buy screen was quite simple, I already had most of that working by extending the existing Inventory system, but the selling screen was trickier and required creating an array of saleable items within the players inventory, and looping over that, rather than the directly the inventory itself. </p>
+
+
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Here&#39;s the new hammer animation and item dropping animations in game. I had no idea that something which felt so simple in my head could take so much effort to move into the gamespace! <a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw">#gamedev</a> <a href="https://twitter.com/hashtag/indiedev?src=hash&amp;ref_src=twsrc%5Etfw">#indiedev</a> <a href="https://twitter.com/hashtag/pixelart?src=hash&amp;ref_src=twsrc%5Etfw">#pixelart</a> <a href="https://twitter.com/hashtag/gameart?src=hash&amp;ref_src=twsrc%5Etfw">#gameart</a> <a href="https://twitter.com/hashtag/GameMakerStudio2?src=hash&amp;ref_src=twsrc%5Etfw">#GameMakerStudio2</a> <a href="https://t.co/ufDEmgSgOz">pic.twitter.com/ufDEmgSgOz</a></p>&mdash; Lunar Pioneer (@lunar_pioneer) <a href="https://twitter.com/lunar_pioneer/status/1153249548925644800?ref_src=twsrc%5Etfw">July 22, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+<p><strong>New Animations</strong></p>
+
+
+
+<p>I&#8217;m no animator, I&#8217;m also not an artist, so getting to work on complex animations (at least, complex to me) for Lunar Pioneer has been a big task. With the prospect of multiple directions * multiple tools * multiple frames for each, my major concern was burning out on so much animation work. Facing this, I spent some time on <a href="https://www.spriters-resource.com">Spriters Resource</a> to get some much needed research done. </p>
+
+
+
+<p>What I found was the player sprite sheet for Stardew Valley, which was hugely eye-opening, I should animate the player and the tools separately, that way I&#8217;m only animating the player once, and the same for each tool. Using this technique I now have an animation in place for the Shovel and the Hammer, and, in my opinion at least, they look OK.</p>
+
+
+
+<p><strong>Auto Generation</strong></p>
+
+
+
+<p>My last big change this week was the beginning implementation of an auto-generation system for the Farm to create the initial farm debris the player will need to clear. The auto-generation itself was very simple, just looping over each area of the &#8220;grid&#8221; on the farm, and placing objects at random.</p>
+
+
+
+<figure class="wp-block-image"><img src="https://lunarpioneer.github.io/wp-content/uploads/2019/07/rocks.png" alt="" class="wp-image-107" srcset="https://lunarpioneer.github.io/wp-content/uploads/2019/07/rocks.png 641w, https://lunarpioneer.github.io/wp-content/uploads/2019/07/rocks-300x268.png 300w" sizes="(max-width: 641px) 100vw, 641px" /><figcaption>Despite being a simple system, it can be manipulated for hilarious results. With a farm like this it would take the player a few days in game to bash a path through to town.</figcaption></figure>
+
+
+
+<p>What was difficult about this part of work is that I didn&#8217;t want this auto generation to happen every day, or every time the player visits the farm. The once off behaviour would be simple to implement with a global boolean or similar, but what I wanted was a re-usable system which would track which game day it was, and trigger this, and other events accordingly.</p>
+
+
+
+<p>What I found was the Game Maker timeline system, ideally it&#8217;s meant for running complex systems based on game steps, but, if you trigger the timeline for 1 step only (and then stop it running) based on the in game day, what the timeline becomes is almost a calendar; if it&#8217;s day 3 send the player a message etc.</p>
+
+
+
+<p>Timelines in Game Maker being a lot more visible than just an array or a similar purely code based system makes this a perfect choice for my event triggers. I have also run some testing on using the same timeline system for generating and controlling levels in the combat area (Mines) of the game, more on this in another devlog soon.</p>
+
+
+
+<p><strong>Weekly Changelog</strong></p>
+
+
+
+<ul><li>Created a computer in the house for the player to receive mail.</li><li>Added basic emote system to chatty objects</li><li>Added basic title screen &#8211; lots more work to do on this!</li><li>Added tile randomisation system when digging</li><li>Update text box system to allow 3 choices &#8212; can now handle any number of choices</li><li>Updated the Pickaxe to be a Hammer instead</li><li>Timeline implemented for day event tracking. Includes a system for room checking so that events run for each room</li><li>Objects in home get restored on room change.</li><li>Moved Inventory screen to be its own object, for better code separation from game object</li><li>Completed Item Buying at the shop</li><li>Completed Item Selling at the shop</li><li>Converted individual UI active states ( text box, shop, inventory ) to use 1 master state</li><li>Some small day end event improvements, more to come</li><li>Pause time when inventory is open.</li><li>Pause time when day end animations are playing</li><li>Improved crop hole digging</li><li>Added bullet explosion animation</li><li>Added slime ranch exterior</li><li>Added Huey, Dewey and Louie <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></li><li>Added 4 basic crop types, economy balancing required</li><li>Added room change fade animation to soften transitions</li><li>Added animations for Shovel and Hammer tools</li><li>Added level creation tool for the mine (combat area)</li><li>Updated object saving script for the farm to account for more than just crops</li><li>Added rock generator to farm for day 1 to ensure the farm is overrun</li></ul>
+]]></content:encoded>
+										</item>
+		<item>
 		<title>Combat Arrives in Lunar Pioneer</title>
 		<link>https://lunarpioneer.github.io/combat-arrives-in-lunar-pioneer/</link>
 				<pubDate>Sun, 14 Jul 2019 13:58:37 +0000</pubDate>

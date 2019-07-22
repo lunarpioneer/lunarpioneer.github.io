@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Blog" lang="en-US"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Economy System, Auto-Generation & Animation – Lunar Pioneer</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="wp-block-library-css" href="https://lunarpioneer.github.io/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="ebor-roboto-font-css" href="//fonts.googleapis.com/css?family=Roboto%3A300%2C500&ver=5.2.2" type="text/css" media="all"><link rel="stylesheet" id="ebor-theme-layout-css" href="https://lunarpioneer.github.io/wp-content/themes/caesar/style/css/caesar-layout.css" type="text/css" media="all"><link rel="stylesheet" id="ebor-style-css" href="https://lunarpioneer.github.io/wp-content/themes/caesar/style.css" type="text/css" media="all"><style id="ebor-style-inline-css" type="text/css">
+
+			.main-logo {
+			  height: 56px;
+			}
+			a {
+			  color: #1976d2;
+			}
+			a:hover {
+			  color: #1565c0;
+			}
+			blockquote {
+			  color: #1c1c1c;
+			  background-color: #f0f0f0;
+			  border-left: 4px solid #1976d2;
+			}
+			code {
+			  border-radius: 2px;
+			  color: #1c1c1c;
+			  background-color: #f0f0f0;
+			}
+			ul,
+			ol {
+			  color: #1c1c1c;
+			}
+			li:before {
+			  color: #999999;
+			}
+			pre {
+			  color: #f0f0f0;
+			  background-color: #1c1c1c;
+			}
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			.h1,
+			.h2,
+			.h3,
+			.h4,
+			.h5,
+			.h6,
+			.quote,
+			.post-title,
+			.post--link .post-body p:first-of-type > a,
+			p.post-more,
+			.post--quote .post-body blockquote:first-of-type {
+			  font-family: Roboto;
+			  font-weight: 500;
+			  color: #1c1c1c;
+			}
+			body,
+			.p {
+			  font-family: Roboto;
+			  font-weight: 300;
+			  color: #4a4a4a;
+			}
+			strong,
+			b {
+			  font-weight: 500;
+			}
+			.dialogue,
+			.post--chat .post-body ul:first-of-type {
+			  color: #1c1c1c;
+			}
+			.dialogue-line--alt,
+			.post--chat .post-body ul:first-of-type > li:nth-child( odd ) {
+			  color: #4a4a4a;
+			}
+			.dialogue-title,
+			.post--chat .post-body ul:first-of-type > li > strong {
+			  color: #999999;
+			}
+			.footnotes {
+			  color: #999999;
+			}
+			.footnotes-link,
+			.post-body [href^="#fn"] {
+			  border-bottom: none;
+			}
+			.meta {
+			  color: #999999;
+			  text-transform: capitalize;
+			}
+			.meta-action:before,
+			.meta-item:before {
+			  color: #b8b8b8;
+			}
+			.meta-item:hover {
+			  color: #707070;
+			}
+			.meta-action:hover:before,
+			.meta-item:hover:before,
+			.meta-shares[data-js~="click-active"]:before {
+			  color: #999999;
+			}
+			.nav {
+			  color: #616161;
+			}
+			.nav-item:hover {
+			  color: #1c1c1c;
+			}
+			.overlay,
+			.msg,
+			.post--overlay .meta {
+			  color: #ededed;
+			}
+			.overlay-inner,
+			.msg {
+			  background: rgba(25,118,210, 0.9);
+			}
+			.overlay-item:before,
+			.msg-back:after,
+			.post--overlay .meta-action:before,
+			.post--overlay .meta-item:before,
+			.post--overlay .post-tags,
+			.post--overlay .post-tags .nav-item:before {
+			  color: #e8e8e8;
+			}
+			.overlay-item:hover,
+			.msg-back:hover,
+			.post--overlay .meta-item:hover {
+			  color: #ffffff;
+			}
+			.overlay-item:hover:before,
+			.msg-back:hover:after,
+			.post--overlay .meta-action:hover:before,
+			.post--overlay .meta-item:hover:before,
+			.post--overlay .meta-shares[data-js~="click-active"]:before,
+			.post--overlay .post-tags .nav-item:hover,
+			.post--overlay .post-tags .nav-item:hover:before {
+			  color: #fafafa;
+			}
+			.popup {
+			  color: #999999;
+			  background-color: #ffffff;
+			  border-radius: 3px;
+			  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.075);
+			  border: 1px solid #e8e8e8;
+			}
+			.popup:before {
+			  border: 8px solid transparent;
+			  border-bottom-color: #e8e8e8;
+			}
+			.popup:after {
+			  border: 6px solid transparent;
+			  border-bottom-color: #ffffff;
+			}
+			.popup-item {
+			  color: inherit;
+			  text-transform: capitalize;
+			  border-bottom: 1px solid #e8e8e8;
+			}
+			.popup-item:hover {
+			  color: #707070;
+			}
+			.popup-item:last-child {
+			  border-bottom: 0;
+			}
+			.quote,
+			.post--quote .post-body blockquote:first-of-type {
+			  border: 0;
+			  background-color: transparent;
+			}
+			.quote-source,
+			.post--quote .post-body blockquote:first-of-type + p {
+			  color: #4a4a4a;
+			}
+			::-moz-selection{
+			  background: #1976d2;
+			  color: #1c1c1c;
+			}
+			::selection {
+			  background: #1976d2;
+			  color: #1c1c1c;
+			}
+			::-moz-selection {
+			  background: #1976d2;
+			  color: #1c1c1c;
+			}
+			body,
+			.popup ul ul {
+			  background-color: #ffffff;
+			}
+			.main:after {
+			  box-shadow: inset -1px 1px 4px 0 rgba(0, 0, 0, 0.075);
+			  border-top: 1px solid #e8e8e8;
+			}
+			.main-title {
+			  color: #1c1c1c;
+			}
+			.main-post,
+			.post-item,
+			.post-body hr {
+			  border-bottom: 1px solid #e8e8e8;
+			}
+			.main-item:last-child,
+			.post-item:last-child {
+			  border-bottom: 0;
+			}
+			.main-nav,
+			.main-nav .popup {
+			  color: #616161;
+			}
+			.main-nav:hover,
+			.main-nav[data-js*="click-active"],
+			.main-nav .popup-item:hover {
+			  color: #1c1c1c;
+			}
+			.main-current,
+			.main-current:hover {
+			  color: #999999;
+			}
+			@media (min-width: 1169px) {
+			  .main:after {
+			    box-shadow: inset 1px -1px 4px 0 rgba(0, 0, 0, 0.075);
+			    border-bottom: 0;
+			    border-left: 1px solid #e8e8e8;
+			  }
+			  .main-nav .popup {
+			    border: none;
+			    box-shadow: none;
+			    background: none;
+			  }
+			  .main-nav .popup-item {
+			    border-bottom: none;
+			  }
+			}
+			.post-icon {
+			  color: #1976d2;
+			}
+			.post-body p a,
+			.quote-source a,
+			.post--quote .post-body blockquote:first-of-type + p a {
+			  border-bottom: 1px solid rgba(25, 118, 210, 0.3);
+			}
+			.post-body p a:hover {
+			  border-bottom-color: #1565c0;
+			}
+			p.post-more a {
+			  border-bottom: 0;
+			  color: inherit;
+			}
+			.post-body mark {
+			  color: #f0f0f0;
+			  background-color: #1976d2;
+			}
+			.post-tags,
+			.post-tags .nav-item:before {
+			  color: #b8b8b8;
+			}
+			.post-tags .nav-item:hover,
+			.post-tags .nav-item:hover:before {
+			  color: #999999;
+			}
+			.post--chat .post-body ul:first-of-type > li > strong {
+			  font-weight: 300;
+			}
+			.post--chat .post-body ul:first-of-type > li > em {
+			  font-style: normal;
+			}
+			.post--link .post-body p:first-of-type > a {
+			  border-bottom: 0;
+			}
+			.sidebar {
+			  color: #7d7d7d;
+			}
+			.sidebar-title {
+			  color: #5c5c5c;
+			}
+			.sidebar-item .nav,
+			.sidebar a {
+			  color: #7d7d7d;
+			}
+			.sidebar-item .nav-item:hover,
+			.sidebar a:hover {
+			  color: #5c5c5c;
+			}
+			.sidebar-credits .nav {
+			  color: #b8b8b8;
+			}
+			.sidebar-credits .nav-item:hover {
+			  color: #7d7d7d;
+			}
+			textarea,
+			input[type="text"],
+			input[type="password"],
+			input[type="datetime"],
+			input[type="datetime-local"],
+			input[type="date"],
+			input[type="month"],
+			input[type="time"],
+			input[type="week"],
+			input[type="number"],
+			input[type="email"],
+			input[type="url"],
+			input[type="search"],
+			input[type="tel"],
+			input[type="color"],
+			input[type="submit"] {
+				border-bottom: 1px solid #e8e8e8;
+			}
+		
+</style><script type="text/javascript" src="https://lunarpioneer.github.io/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://lunarpioneer.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><style type="text/css" id="wp-custom-css">
+			.sidebar,
+.main:after,
+.meta-shares-count,
+.meta-shares {
+	display: none !important;
+}
+.post-body img {
+	max-height: 80vh;
+	width: auto;
+	display: block;
+	margin: 0 auto;
+}
+.post-body {
+	max-width: 600px;
+}		</style></head><body class="post-template-default single single-post postid-96 single-format-standard body">
+
+
+<div class="wrapper body-wrapper">
+	<div class="main" data-js="main">
+		<div class="wrapper main-wrapper">
+		
+			<header role="header" class="main-item main-header" data-js="main-item"><div class="wrapper">
+				
+											<h1 itemprop="name" class="main-title">
+							<a itemprop="url" href="https://lunarpioneer.github.io/" title="Lunar Pioneer">
+								Lunar Pioneer							</a>
+						</h1>
+										
+					<nav class="icon-ui icon-ui-menu btns-item main-nav" data-js="click"><div class="popup popup--right" role="navigation" data-ani="hide" data-js="popup-list">
+													</div>
+					</nav></div>
+			</header><article itemscope itemtype="http://schema.org/BlogPosting" id="96" data-js="post post--photo post--cover post--index post-start" data-permalink="https://lunarpioneer.github.io/economy-system-auto-generation-animation/" class="post--permalink main-item main-post post-- post-96 post type-post status-publish format-standard hentry category-uncategorized"><div class="wrapper post-wrapper">
+	
+				
+		<aside class="post-sidebar" data-js="post-sidebar"><div class="meta meta--stacked post-meta">
+	
+<div class="icon-ui icon-ui-share btns-item meta-action meta-shares" data-js="click share">
+	<div class="popup">
+	
+		<a href="https://www.facebook.com/sharer/sharer.php?u=https://lunarpioneer.github.io/economy-system-auto-generation-animation/" class="icon icon-facebook popup-item" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+			<span class="meta-count" data-js="share-facebook-count">0</span><span class="meta-plural" data-js="share-facebook-plural"> Share</span>
+		</a>
+		
+		<a href="https://plus.google.com/share?url=https://lunarpioneer.github.io/economy-system-auto-generation-animation/" class="icon icon-googleplus popup-item" onclick="window.open(this.href, 'google-plus-share', 'width=475,height=435');return false;">
+			<span class="meta-count" data-js="share-googleplus-count">0</span><span class="meta-plural" data-js="share-googleplus-plural"> Share</span>
+		</a>
+		
+		<a href="http://www.linkedin.com/shareArticle?mini=true&url=https://lunarpioneer.github.io/economy-system-auto-generation-animation/&title=Economy+System%2C+Auto-Generation+%26%23038%3B+Animation" class="icon icon-linkedin popup-item" onclick="window.open(this.href, 'linkedin-share', 'width=550,height=550');return false;">
+			<span class="meta-count" data-js="share-linkedin-count">0</span><span class="meta-plural" data-js="share-linkedin-plural"> Share</span>
+		</a>
+		
+		<a href="http://pinterest.com/pin/create/button/?url=https://lunarpioneer.github.io/economy-system-auto-generation-animation/&description=Economy+System%2C+Auto-Generation+%26%23038%3B+Animation&media=" class="icon icon-pinterest popup-item" onclick="window.open(this.href, 'pinterest-share', 'width=770,height=330');return false;">
+			<span class="meta-count" data-js="share-pinterest-count">0</span><span class="meta-plural" data-js="share-pinterest-plural"> Pin</span>
+		</a>
+		
+		<a href="https://twitter.com/share?text=Economy+System%2C+Auto-Generation+%26%23038%3B+Animation&url=https://lunarpioneer.github.io/economy-system-auto-generation-animation/" class="icon icon-twitter popup-item" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+			<span class="meta-count" data-js="share-twitter-count">0</span><span class="meta-plural" data-js="share-twitter-plural"> Tweet</span>
+		</a>
+	
+	</div>
+</div><a class="meta-item meta-author" href="https://lunarpioneer.github.io/author/tommus/" title="Posts by tommus" rel="author">tommus</a>	<a itemprop="datePublished" href="https://lunarpioneer.github.io/economy-system-auto-generation-animation/" class="meta-item meta-date">July 22, 2019</a>
+	<a href="https://lunarpioneer.github.io/economy-system-auto-generation-animation/#respond" class="icon-ui icon-ui-comment meta-item meta-comments-count">
+		<span class="meta-count disqus-comment-count">
+			0 </span><span class="meta-plural">Comments		</span>
+	</a>
+	<a href="https://lunarpioneer.github.io/economy-system-auto-generation-animation/" class="icon-ui icon-ui-share meta-item meta-shares-count" data-js="share-total"><span class="meta-count" data-js="share-total-count">0</span><span class="meta-plural" data-js="share-total-plural"> share</span></a>
+</div>
+
+		</aside><section class="post-item post-body post-content" data-js="post-body"><h2 itemprop="headline" class="post-title"><a itemprop="url" href="https://lunarpioneer.github.io/economy-system-auto-generation-animation/" title="Economy System, Auto-Generation & Animation">Economy System, Auto-Generation & Animation</a></h2><div class="meta post-meta">
+	<a class="meta-item meta-author" href="https://lunarpioneer.github.io/author/tommus/" title="Posts by tommus" rel="author">tommus</a>	<a itemprop="datePublished" href="https://lunarpioneer.github.io/economy-system-auto-generation-animation/" class="meta-item meta-date">July 22, 2019</a>
+	<div class="meta-actions">
+		<a href="https://lunarpioneer.github.io/economy-system-auto-generation-animation/#respond" class="icon-ui icon-ui-comment meta-item meta-comments-count">
+			<span class="meta-count disqus-comment-count">
+				0 </span><span class="meta-plural">Comments			</span>
+		</a>
+		<a href="https://lunarpioneer.github.io/economy-system-auto-generation-animation/" class="icon-ui icon-ui-share meta-item meta-shares-count" data-js="share-total"><span class="meta-count" data-js="share-total-count">0</span><span class="meta-plural" data-js="share-total-plural"> share</span></a>
+	</div>
+</div>
+<p>Week 4 was the busiest week I’ll likely have with Lunar Pioneer for a while, as my real life job is going to be busy for a few weeks now. I completed <strong>loads</strong> of tasks this week however, every week I’m inching Lunar Pioneer toward being a playable and enjoyable game, but right now, it’s still a state of disconnected systems.</p>
+
+
+
+<p>I have started a dedicated <a href="https://twitter.com/lunar_pioneer">Twitter account for Lunar Pioneer</a> also, check it out, follow etc. if you’re interested in the game and my journey making it 🙂</p>
+
+
+
+<p><strong>Adding a full economy to the game</strong></p>
+
+
+
+<p>My idea for Lunar Pioneer has always been a dual economy, Gold & Oxygen. The player will have to make a decision of how best to handle their crops, animals etc. Based upon their current needs for either  consumable. As of week 4, the game now has a strong (albeit in need of balance) Gold economy. The player can visit the shop in town, buy seeds, sell crops and grow their farm. It’s also possible for the player to harvest oxygen from fully grown crops, and add this to mass storage, though nothing happens from there.</p>
+
+
+
+<p>I had a number of challenges implementing the shop screen, the chief being that I don’t want the player to be able to sell key items. The buy screen was quite simple, I already had most of that working by extending the existing Inventory system, but the selling screen was trickier and required creating an array of saleable items within the players inventory, and looping over that, rather than the directly the inventory itself. </p>
+
+
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Here's the new hammer animation and item dropping animations in game. I had no idea that something which felt so simple in my head could take so much effort to move into the gamespace! <a href="https://twitter.com/hashtag/gamedev?src=hash&ref_src=twsrc%5Etfw">#gamedev</a> <a href="https://twitter.com/hashtag/indiedev?src=hash&ref_src=twsrc%5Etfw">#indiedev</a> <a href="https://twitter.com/hashtag/pixelart?src=hash&ref_src=twsrc%5Etfw">#pixelart</a> <a href="https://twitter.com/hashtag/gameart?src=hash&ref_src=twsrc%5Etfw">#gameart</a> <a href="https://twitter.com/hashtag/GameMakerStudio2?src=hash&ref_src=twsrc%5Etfw">#GameMakerStudio2</a> <a href="https://t.co/ufDEmgSgOz">pic.twitter.com/ufDEmgSgOz</a></p>— Lunar Pioneer (@lunar_pioneer) <a href="https://twitter.com/lunar_pioneer/status/1153249548925644800?ref_src=twsrc%5Etfw">July 22, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><p><strong>New Animations</strong></p>
+
+
+
+<p>I’m no animator, I’m also not an artist, so getting to work on complex animations (at least, complex to me) for Lunar Pioneer has been a big task. With the prospect of multiple directions * multiple tools * multiple frames for each, my major concern was burning out on so much animation work. Facing this, I spent some time on <a href="https://www.spriters-resource.com">Spriters Resource</a> to get some much needed research done. </p>
+
+
+
+<p>What I found was the player sprite sheet for Stardew Valley, which was hugely eye-opening, I should animate the player and the tools separately, that way I’m only animating the player once, and the same for each tool. Using this technique I now have an animation in place for the Shovel and the Hammer, and, in my opinion at least, they look OK.</p>
+
+
+
+<p><strong>Auto Generation</strong></p>
+
+
+
+<p>My last big change this week was the beginning implementation of an auto-generation system for the Farm to create the initial farm debris the player will need to clear. The auto-generation itself was very simple, just looping over each area of the “grid” on the farm, and placing objects at random.</p>
+
+
+
+<figure class="wp-block-image"><img src="https://lunarpioneer.github.io/wp-content/uploads/2019/07/rocks.png" alt="" class="wp-image-107" srcset="https://lunarpioneer.github.io/wp-content/uploads/2019/07/rocks.png 641w,https://lunarpioneer.github.io/wp-content/uploads/2019/07/rocks-300x268.png 300w" sizes="(max-width: 641px) 100vw, 641px"><figcaption>Despite being a simple system, it can be manipulated for hilarious results. With a farm like this it would take the player a few days in game to bash a path through to town.</figcaption></figure><p>What was difficult about this part of work is that I didn’t want this auto generation to happen every day, or every time the player visits the farm. The once off behaviour would be simple to implement with a global boolean or similar, but what I wanted was a re-usable system which would track which game day it was, and trigger this, and other events accordingly.</p>
+
+
+
+<p>What I found was the Game Maker timeline system, ideally it’s meant for running complex systems based on game steps, but, if you trigger the timeline for 1 step only (and then stop it running) based on the in game day, what the timeline becomes is almost a calendar; if it’s day 3 send the player a message etc.</p>
+
+
+
+<p>Timelines in Game Maker being a lot more visible than just an array or a similar purely code based system makes this a perfect choice for my event triggers. I have also run some testing on using the same timeline system for generating and controlling levels in the combat area (Mines) of the game, more on this in another devlog soon.</p>
+
+
+
+<p><strong>Weekly Changelog</strong></p>
+
+
+
+<ul><li>Created a computer in the house for the player to receive mail.</li><li>Added basic emote system to chatty objects</li><li>Added basic title screen – lots more work to do on this!</li><li>Added tile randomisation system when digging</li><li>Update text box system to allow 3 choices — can now handle any number of choices</li><li>Updated the Pickaxe to be a Hammer instead</li><li>Timeline implemented for day event tracking. Includes a system for room checking so that events run for each room</li><li>Objects in home get restored on room change.</li><li>Moved Inventory screen to be its own object, for better code separation from game object</li><li>Completed Item Buying at the shop</li><li>Completed Item Selling at the shop</li><li>Converted individual UI active states ( text box, shop, inventory ) to use 1 master state</li><li>Some small day end event improvements, more to come</li><li>Pause time when inventory is open.</li><li>Pause time when day end animations are playing</li><li>Improved crop hole digging</li><li>Added bullet explosion animation</li><li>Added slime ranch exterior</li><li>Added Huey, Dewey and Louie 🙂</li><li>Added 4 basic crop types, economy balancing required</li><li>Added room change fade animation to soften transitions</li><li>Added animations for Shovel and Hammer tools</li><li>Added level creation tool for the mine (combat area)</li><li>Updated object saving script for the farm to account for more than just crops</li><li>Added rock generator to farm for day 1 to ensure the farm is overrun</li></ul></section></div>
+</article></div>
+	</div>
+
+	<div class="sidebar" data-js="sidebar">
+	<div class="wrapper sidebar-wrapper">
+			</div>
+</div>
+</div>
+
+<script type="text/javascript" src="https://lunarpioneer.github.io/wp-content/themes/caesar/style/js/caesar-core.min.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wp_data = {"dribbble_per_page":"4","dribbble_url":"http:\/\/api.dribbble.com\/shots\/popular","instagram_per_page":"4","instagram_url":"https:\/\/api.instagram.com\/v1\/media\/popular","instagram_api":"1693283520.d39970c.fd010cb253f64f0991d1c9025f963027","share_count_api":"10dcb995e71645dec34d97db78ef770dc07ffc2a"};
+/* ]]> */
+</script><script type="text/javascript" src="https://lunarpioneer.github.io/wp-content/themes/caesar/style/js/scripts.js"></script></body></html>

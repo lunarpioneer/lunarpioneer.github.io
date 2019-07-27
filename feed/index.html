@@ -12,7 +12,7 @@
 	<atom:link href="https://lunarpioneer.github.io/feed/" rel="self" type="application/rss+xml" />
 	<link>http://lunarpioneer.github.io/</link>
 	<description>A game about farming oxygen on the moon</description>
-	<lastBuildDate>Mon, 22 Jul 2019 10:24:51 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 27 Jul 2019 14:18:26 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,111 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=5.2.2</generator>
 	<item>
+		<title>Week 5 &#8211; Portraits, Animations, a Tortoise and a Cat</title>
+		<link>https://lunarpioneer.github.io/week-5-portraits-animations-a-tortoise-a-cat/</link>
+				<pubDate>Sat, 27 Jul 2019 14:00:52 +0000</pubDate>
+		<dc:creator><![CDATA[tommus]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://lunarpioneer.github.io/?p=112</guid>
+				<description><![CDATA[Week 5 went a bit slower than I had hoped, mainly due to real life commitments, (got to keep the day job moving) though I have amassed quite a big changelog for the week, so let&#8217;s look through some of...]]></description>
+								<content:encoded><![CDATA[
+<p>Week 5 went a bit slower than I had hoped, mainly due to real life commitments, (got to keep the day job moving) though I have amassed quite a big changelog for the week, so let&#8217;s look through some of those.</p>
+
+
+
+<figure class="wp-block-image"><img src="https://lunarpioneer.github.io/wp-content/uploads/2019/07/dialogue.png" alt="" class="wp-image-116" srcset="https://lunarpioneer.github.io/wp-content/uploads/2019/07/dialogue.png 637w, https://lunarpioneer.github.io/wp-content/uploads/2019/07/dialogue-300x269.png 300w" sizes="(max-width: 637px) 100vw, 637px" /><figcaption>The dialogue system has had an overhaul, and there&#8217;s been a few changes to the HUD also.</figcaption></figure>
+
+
+
+<p><strong>Portraits and Dialogue System Improvements</strong></p>
+
+
+
+<p>The dialogue system in Lunar Pioneer has had some significant updates this week, including portraits, a portrait switching system, and improved event handling on user selections.</p>
+
+
+
+<p>I have build this dialogue system myself, from scratch, without following tutorials. I know there&#8217;s a million dialogue systems out there, including a fantastic looking one by <a href="https://friendlycosmonaut.itch.io/dialoguesystem">Friendly Cosmonaut</a> &#8212; but, I have always thought there&#8217;s a lot more to be learnt by doing something yourself first.</p>
+
+
+
+<p>I have probably made a bunch of mistakes with the system, but I&#8217;m happy with how it&#8217;s shaping up for now, and most importantly, I know it inside out.</p>
+
+
+
+<p><strong>A bunch of animations</strong></p>
+
+
+
+<p>I have finally put together all 3 of the tool animations (currently) in the game, that&#8217;s the shovel, hammer and vacuum. I&#8217;m sure these will be re-worked again and again during development, but for now, I&#8217;m really happy.</p>
+
+
+
+<p><strong>Bringing life into the house</strong></p>
+
+
+
+<p>So far the Town area of the game only has access to a Shop, and a Builders house. Both were feeling a little drab and lifeless so I have added Fabian the cat to the shop, and Zaphod the tortoise into the Builders place. Both animals have emotions based on how you interact with them, and their owners will have something to say about it too!</p>
+
+
+
+<p><strong>Using timelines</strong></p>
+
+
+
+<p>I can&#8217;t really find too much talk around using the Timeline feature of Game Maker Studio 2 anywhere for anything other than its intended use. Stepping through the game 1 step at a time and giving commands to an object.</p>
+
+
+
+<p>Since the timeline editor is so visual, I feel like it&#8217;s a great system for tracking other items also, personally I&#8217;m using it to:</p>
+
+
+
+<ul><li>Handle daily events based on the current game day.</li><li>Track individual relationships the player has with NPCs and control dialogue and events related to that.</li></ul>
+
+
+
+<p>I&#8217;m a big old noob in terms of Game Maker development skills, but I&#8217;ll write a tutorial soon about what I&#8217;m doing with the Timelines and how you can adapt them in the same way.</p>
+
+
+
+<p><strong>The state of Lunar Pioneer</strong></p>
+
+
+
+<p>I&#8217;m going to start adding this section to each Devlog from now on, where I&#8217;ll cover the projects current state, and a more general overview of what I&#8217;ll be working on in the coming week.</p>
+
+
+
+<p>I would describe Lunar Pioneer as pre-alpha currently, though at only 5 weeks in, with an inexperienced solo Game Maker developer, I&#8217;m beyond happy with the progress I&#8217;m making. Right now the game is <em>playable </em>but not exactly usable. The combat area is inaccessible, o2 meter does nothing after running out, the day ending before you go to bed does nothing etc.</p>
+
+
+
+<p>Those are all the finer points though, I&#8217;ve been working on a robust farming system which is up and running, a combat system which is nice and the game has a full working economy. Essentially the big systems are in place, now I just need to tie them all together.</p>
+
+
+
+<p>I&#8217;m hoping for an alpha demo of Lunar Pioneer to be ready by early September 2019, let&#8217;s see if I can stick to that.</p>
+
+
+
+<p><strong>Weekly Changelog</strong></p>
+
+
+
+<ul><li>Added crater object</li><li>Added crater to day 1 farm objects generation</li><li>Improved objects generation script to disallow overlapping items</li><li>Added event to fill in (and remove) craters from the farm with 20 dirt.</li><li>Added new crop mechanic &#8211; dust</li><li>Crops have a 10% chance to be dusty on a morning, need to be vacuumed so they will grow or produce oxygen</li><li>Vacuuming dust will give the player dirt</li><li>Added more floor tiles and crop hole tile improvements</li><li>Added shake to the player object when hit in the mine</li><li>Begun adding audio groups and group volume level functionality</li><li>Added room transitions for the mine (combat arena)</li><li>Added basic options screen (only shows controls currently)</li><li>Improved bullet creation point on combat player</li><li>Added functioning storage chest to the house</li><li>Added storing screen to storage chest</li><li>Added retreival screen to storage chest</li><li>Added runtime shader for different colour schemes</li><li>Small HUD re-design</li><li>Added pleasing shake effect courtesy of https://forum.yoyogames.com/index.php?threads/making-sprite-object-shake.13027/</li><li>Added small screen shake when player takes damage</li><li>Added portrait system to dialogue boxes</li><li>Updated Shop Keeper sprite and portrait</li><li>Added Fabian the cat to the shop <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></li><li>Finished Vacuum animation</li><li>Added UI message on object pickup</li><li>Added UI message on object removal from inventory</li><li>Added system for changing portraits during conversations</li></ul>
+
+
+
+<p><strong>Footnotes</strong></p>
+
+
+
+<p>Next week (week 6! wow) will be another slow one on the game development front, I have a few web projects I need to get under my belt, they&#8217;re quite enjoyable ones too (can&#8217;t share sadly) but needless to say, if I have an hour or two, I&#8217;ll be working on Lunar Pioneer. Hopefully I can still get a nice big changelog together.</p>
+]]></content:encoded>
+										</item>
+		<item>
 		<title>Economy System, Auto-Generation &#038; Animation</title>
 		<link>https://lunarpioneer.github.io/economy-system-auto-generation-animation/</link>
 				<pubDate>Mon, 22 Jul 2019 09:53:53 +0000</pubDate>

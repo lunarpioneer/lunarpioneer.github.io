@@ -12,7 +12,7 @@
 	<atom:link href="https://lunarpioneer.github.io/feed/" rel="self" type="application/rss+xml" />
 	<link>http://lunarpioneer.github.io/</link>
 	<description>A game about farming oxygen on the moon</description>
-	<lastBuildDate>Sat, 27 Jul 2019 14:18:26 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 05 Aug 2019 19:23:08 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,59 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=5.2.2</generator>
 	<item>
+		<title>Week 6 &#8211; Portraits, Saving, Loading &#038; Text Input</title>
+		<link>https://lunarpioneer.github.io/week-6-portraits-saving-loading-text-input/</link>
+				<pubDate>Mon, 05 Aug 2019 19:08:08 +0000</pubDate>
+		<dc:creator><![CDATA[tommus]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://lunarpioneer.github.io/?p=124</guid>
+				<description><![CDATA[Week 6 of Lunar Pioneer was a bit slower than previous weeks. I&#8217;ve been working on real-world jobs this week, keeping the day job running smoothly. Over the weekend I took part in the Game Makers Toolkit Game Jam, my...]]></description>
+								<content:encoded><![CDATA[
+<p>Week 6 of Lunar Pioneer was a bit slower than previous weeks. I&#8217;ve been working on real-world jobs this week, keeping the day job running smoothly. Over the weekend I took part in the Game Makers Toolkit Game Jam, my first ever game jam. The result of that was my first ever released game, <a href="https://tommusrhodus.itch.io/drillbit">DrillBit</a>! You can play <a href="https://tommusrhodus.itch.io/drillbit">DrillBit</a> in your browser now for free <a href="https://tommusrhodus.itch.io/drillbit">https://tommusrhodus.itch.io/drillbit</a></p>
+
+
+
+<figure class="wp-block-image"><img src="https://lunarpioneer.github.io/wp-content/uploads/2019/08/teardown.png" alt="" class="wp-image-128" srcset="https://lunarpioneer.github.io/wp-content/uploads/2019/08/teardown.png 800w, https://lunarpioneer.github.io/wp-content/uploads/2019/08/teardown-300x168.png 300w, https://lunarpioneer.github.io/wp-content/uploads/2019/08/teardown-768x430.png 768w" sizes="(max-width: 800px) 100vw, 800px" /><figcaption>My first ever released game, an infinite-runner.</figcaption></figure>
+
+
+
+<p>Week 7 is likely to be a slow one too, as I am away for half of the week, really looking forward to week 8 and getting back up to speed with Lunar Pioneer.</p>
+
+
+
+<p><strong>Portraits and cutscenes</strong></p>
+
+
+
+<p>One thing that I did complete in week 6 for Lunar Pioneer was a portrait system for the dialogue boxes. I also added a bunch of portraits, and also a basic cutscene system. The cutscene system simply switches the displayed portrait, but it works, conversations feel more real now.</p>
+
+
+
+<p><strong>Saving and loading!</strong></p>
+
+
+
+<p>Thanks to the marvellous Shaun Spalding I now have a full saving and loading system in Lunar Pioneer, and the system works on JSON. I have been wondering how to tackle this for a while now until watching a short and simple video produced by Shaun, I knew that the JSON method was right for Lunar Pioneer. It&#8217;s a markup format I&#8217;m already familiar and happy with. Implementing was rather simple, within around 2 hours I had a full saving system that triggers each time the player sleeps, and a loading system with 4 different save slots.</p>
+
+
+
+<p><strong>Text input</strong></p>
+
+
+
+<p>The player finally has a name! When starting a new game there&#8217;s now a text input system that was created by hijacking the inventory system. Apart from some time spent getting the art correct, the system came together really quickly. I&#8217;ll be using this same system to name ranch animals when I get around to putting that system together.</p>
+
+
+
+<p><strong>Weekly Changelog</strong></p>
+
+
+
+<ul><li>Added basic cutscene system (portrait switching)</li><li>Added local Builder sprite</li><li>Added Builder portrait</li><li>Added text input screen for player name</li><li>Basic Saving and loading added &#8211; more work needed</li><li>Game load screen with 4 save slots added</li><li>Saving system tied to day change event.</li><li>Loading system improved and functional.</li><li>Added name check when creating a new character to ensure that existing characters are not overwritten.</li><li>Using boost in the combat area allows you to dodge damage &#8211; allows for a decent escape mechanic</li><li>Using boost costs Oxygen, this will likely need balancing</li><li>Crop growth, stage change, Oxygen reset, dust etc. Now happens on day end (save) rather than entering the farm on a new day. This means all random elements (dust) are correctly stored.</li></ul>
+]]></content:encoded>
+										</item>
+		<item>
 		<title>Week 5 &#8211; Portraits, Animations, a Tortoise and a Cat</title>
 		<link>https://lunarpioneer.github.io/week-5-portraits-animations-a-tortoise-a-cat/</link>
 				<pubDate>Sat, 27 Jul 2019 14:00:52 +0000</pubDate>
